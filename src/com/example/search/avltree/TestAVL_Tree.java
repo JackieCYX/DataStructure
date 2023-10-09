@@ -119,11 +119,11 @@ public class TestAVL_Tree {
             if (size == 0) {//如果树里没有节点,是第一次添加
                 tree.add(new_node);
             } else {
-                indexOf(getRootNode(), new_node);//计算插入的位置
+                // indexOf(getRootNode(), new_node);//计算插入的位置
                 if (new_node.parent_node != null) {
                     tree.add(new_node);//添加到队列
                 }
-                reCountNodeBF();//重新计算每个节点的平衡因子
+                // reCountNodeBF();//重新计算每个节点的平衡因子
                 TreeNode minUnBalanceTree = countMinUnBalanceNode(new_node);//计算最小不平衡子树
                 if (minUnBalanceTree != null) {//代表失衡
                     System.out.println("最小不平衡子树为： " + minUnBalanceTree.toString());
@@ -187,7 +187,7 @@ public class TestAVL_Tree {
 
             left_child.right_child = node;//现父节点(原左子节点)的右子树改为原父节点
             node.parent_node = left_child;//现右子树(原父节点)的父节点改为原左子树(现父节点)
-            reCountNodeBF();//右旋完成重新计算节点的平衡因子
+            // reCountNodeBF();//右旋完成重新计算节点的平衡因子
             System.out.println("右旋后: " + tree.toString());
         }
 
@@ -218,7 +218,7 @@ public class TestAVL_Tree {
 
             right_child.left_child = node;//现父节点(原右子树)的左子树改为原父节点
             node.parent_node = right_child;//现左子树(原父节点)的父节点改为原右子树(现父节点)
-            reCountNodeBF();//左旋完成重新计算节点的平衡因子
+            // reCountNodeBF();//左旋完成重新计算节点的平衡因子
             System.out.println("左旋后: " + tree.toString());
         }
 
