@@ -1,12 +1,27 @@
 package com.example.sort.insert.insertsort;
 
+import java.util.Random;
+
 /**
  * 直接插入排序
  */
 public class InsertSort {
     public static void main(String[] args) {
-        int[] array = {42, 17, 56, 89, 23, 5, 74, 33, 61, 10, 29, 92, 70, 84, 68, 11, 39, 95, 77, 6};
+        // 使用random随机生成较大数组
+        int[] array = new int[100];
+        Random random = new Random();
+
+        for (int i = 0; i < 100; i++) {
+            array[i] = random.nextInt();
+        }
+
+        // 使用未优化的冒泡排序
+        long startTime = System.currentTimeMillis();
         insertSort(array);
+        long endTime = System.currentTimeMillis();
+        long elapsedTime = endTime - startTime;
+        System.out.println("程序运行时间（毫秒）：" + elapsedTime);
+
         for (int j : array) {
             System.out.print(j + " ");
         }

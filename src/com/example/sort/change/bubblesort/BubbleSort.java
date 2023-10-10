@@ -1,8 +1,16 @@
 package com.example.sort.change.bubblesort;
 
+import java.util.Random;
+
 public class BubbleSort {
     public static void main(String[] args) {
-        int[] array = {42, 17, 56, 89, 23, 5, 74, 33, 61, 10, 29, 92, 70, 84, 68, 11, 39, 95, 77, 6};
+        // 使用random随机生成较大数组
+        int[] array = new int[100];
+        Random random = new Random();
+
+        for (int i = 0; i < 100; i++) {
+            array[i] = random.nextInt();
+        }
         // 使用未优化的冒泡排序
         long startTime = System.currentTimeMillis();
         bubbleSort(array);
