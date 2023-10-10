@@ -19,8 +19,6 @@ public class QuickSort {
         for (int i = 0; i < 100; i++) {
             array[i] = random.nextInt();
         }
-
-        // 使用未优化的冒泡排序
         long startTime = System.currentTimeMillis();
         quickSort(array);
         long endTime = System.currentTimeMillis();
