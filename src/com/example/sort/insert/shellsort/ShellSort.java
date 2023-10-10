@@ -4,6 +4,9 @@ import java.util.Random;
 
 /**
  * 希尔排序
+ * 时间复杂度：O（N^1.3~N^1.5）
+ * 空间复杂度：O（1）
+ * 稳定性：不稳定
  */
 public class ShellSort {
     public static void main(String[] args) {
@@ -27,14 +30,6 @@ public class ShellSort {
 
     }
 
-    /**
-     * 希尔排序
-     * 时间复杂度：O（N^1.3~N^1.5）
-     * 空间复杂度：O（1）
-     * 稳定性：不稳定
-     *
-     * @param array
-     */
     public static void shellSort(int[] array) {
         int gap = array.length;
         while (gap > 1) {

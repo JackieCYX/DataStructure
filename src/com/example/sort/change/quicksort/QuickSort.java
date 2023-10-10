@@ -3,7 +3,12 @@ package com.example.sort.change.quicksort;
 import java.util.Random;
 
 /**
- * 快速排序
+ * 快排
+ * 时间复杂度：最好情况：O(N^log₂N)
+ * 最坏情况：有序或逆序：O（N^N） 数据量大时有可能栈溢出异常
+ * 空间复杂度：最好情况：O(logN)
+ * 最坏情况：有序或逆序：O（N）
+ * 稳定性：不稳定
  */
 public class QuickSort {
     public static void main(String[] args) {
@@ -23,14 +28,6 @@ public class QuickSort {
         System.out.println("程序运行时间（毫秒）：" + elapsedTime);
     }
 
-    /**
-     * 快排
-     * 时间复杂度：最好情况：O(N^log₂N)
-     * 最坏情况：有序或逆序：O（N^N） 数据量大时有可能栈溢出异常
-     * 空间复杂度：最好情况：O(logN)
-     * 最坏情况：有序或逆序：O（N）
-     * 稳定性：不稳定
-     */
     public static void quickSort(int[] array) {
         quick(array, 0, array.length - 1);
     }

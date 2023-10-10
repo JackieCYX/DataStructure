@@ -4,6 +4,9 @@ import java.util.Random;
 
 /**
  * 直接插入排序
+ * 时间复杂度：最坏 O（N^2），最好 O（N）
+ * 空间复杂度：O（1）
+ * 稳定性：稳定
  */
 public class InsertSort {
     public static void main(String[] args) {

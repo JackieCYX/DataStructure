@@ -2,6 +2,12 @@ package com.example.sort.change.bubblesort;
 
 import java.util.Random;
 
+/**
+ * 冒泡排序
+ * 时间复杂度:最坏 O(N*N) 最好 O(N)
+ * 时间复杂度:O(1)
+ * 稳定性:稳定
+ */
 public class BubbleSort {
     public static void main(String[] args) {
         // 使用random随机生成较大数组
@@ -28,12 +34,6 @@ public class BubbleSort {
 
     }
 
-    /**
-     * 冒泡排序(未优化)
-     * 时间复杂度:最坏 O(N*N) 最好 O(N)
-     * 时间复杂度:O(1)
-     * 稳定性:稳定
-     */
     public static void bubbleSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
